@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # منع الوصول المباشر لملفات PDF
+    RewriteCond %{REQUEST_URI} \.pdf$ [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://[^/]*%{HTTP_HOST} [NC]
+    RewriteRule ^.*$ - [F,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
