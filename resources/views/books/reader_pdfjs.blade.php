@@ -445,7 +445,7 @@ async function loadPDF() {
         // إعدادات تحميل محلية مع دعم محسّن للخطوط العربية
         const loadingTask = pdfjsLib.getDocument({
             url: pdfUrl,
-            disableFontFace: false,
+            disableFontFace: true,
             disableRange: false,
             disableStream: false,
             fontExtraProperties: true
