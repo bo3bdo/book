@@ -12,13 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Noto Sans Arabic) -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Noto Sans Arabic', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Cairo', sans-serif;
+            background-color: #F5F5DC; /* Beige */
             line-height: 1.6;
         }
         
@@ -28,7 +28,7 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #556B2F 0%, #6B8E23 100%); /* Dark Olive to Olive Drab */
             color: white;
             padding: 80px 0;
         }
@@ -43,11 +43,11 @@
         .search-box:focus {
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0.25rem rgba(85, 107, 47, 0.2);
         }
         
         .card {
-            border: none;
+            border: 1px solid #D2B48C; /* Tan */
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
@@ -55,7 +55,7 @@
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
         
         .book-card {
@@ -69,7 +69,7 @@
         }
         
         .category-card {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #6B8E23, #C3B091); /* Olive Drab to Khaki */
             color: white;
             border-radius: 15px;
             padding: 20px;
@@ -84,7 +84,7 @@
         }
         
         .stats-card {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #556B2F, #6B8E23); /* Dark Olive to Olive Drab */
             color: white;
             border-radius: 15px;
             padding: 30px;
@@ -92,24 +92,33 @@
         }
         
         .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #556B2F, #6B8E23); /* Dark Olive to Olive Drab */
             border: none;
             border-radius: 50px;
             padding: 10px 30px;
             font-weight: 500;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #6B8E23, #556B2F);
+            color: white;
         }
         
         .btn-outline-primary {
-            border: 2px solid #667eea;
-            color: #667eea;
+            border: 2px solid #556B2F; /* Dark Olive */
+            color: #556B2F; /* Dark Olive */
             border-radius: 50px;
             padding: 10px 30px;
             font-weight: 500;
         }
+        .btn-outline-primary:hover {
+            background-color: #556B2F;
+            color: white;
+        }
         
         .footer {
-            background: #2c3e50;
-            color: white;
+            background: #3C341F; /* Dark Brown */
+            color: #F5F5DC; /* Beige */
             padding: 50px 0 20px;
         }
         
@@ -129,27 +138,27 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #556B2F, #6B8E23); /* Dark Olive to Olive Drab */
             border-radius: 2px;
         }
         
         .badge-custom {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #6B8E23, #C3B091); /* Olive Drab to Khaki */
             color: white;
             border-radius: 50px;
             padding: 5px 15px;
         }
         
         .nav-link:hover {
-            color: #667eea !important;
+            color: #556B2F !important; /* Dark Olive */
         }
         
         .navbar-toggler {
-            border: none;
+            border-color: rgba(85, 107, 47, 0.3);
         }
         
         .dropdown-menu {
-            border: none;
+            border: 1px solid #D2B48C; /* Tan */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
@@ -194,7 +203,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand text-primary" href="{{ route('home') }}">
+            <a class="navbar-brand" href="{{ route('home') }}" style="color: #556B2F !important;">
                 <i class="fas fa-book-open me-2"></i>
                 مكتبة الكتب
             </a>
@@ -257,7 +266,7 @@
                         <i class="fas fa-book-open me-2"></i>
                         مكتبة الكتب
                     </h5>
-                    <p class="text-light">
+                    <p>
                         مكتبة شاملة للكتب الإلكترونية بصيغة PDF. اكتشف آلاف الكتب في مختلف المجالات واقرأها أو حملها مجاناً.
                     </p>
                 </div>
@@ -265,9 +274,9 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="mb-3">روابط سريعة</h6>
                     <ul class="list-unstyled">
-                        <li><a href="{{ route('home') }}" class="text-light text-decoration-none">الرئيسية</a></li>
-                        <li><a href="{{ route('books.index') }}" class="text-light text-decoration-none">جميع الكتب</a></li>
-                        <li><a href="{{ route('categories.index') }}" class="text-light text-decoration-none">الفئات</a></li>
+                        <li><a href="{{ route('home') }}" class="text-decoration-none" style="color: inherit;">الرئيسية</a></li>
+                        <li><a href="{{ route('books.index') }}" class="text-decoration-none" style="color: inherit;">جميع الكتب</a></li>
+                        <li><a href="{{ route('categories.index') }}" class="text-decoration-none" style="color: inherit;">الفئات</a></li>
                     </ul>
                 </div>
                 
@@ -275,7 +284,7 @@
                     <h6 class="mb-3">الفئات الشائعة</h6>
                     <ul class="list-unstyled">
                         @foreach($headerCategories->take(5) as $category)
-                            <li><a href="{{ route('categories.show', $category) }}" class="text-light text-decoration-none">{{ $category->name }}</a></li>
+                            <li><a href="{{ route('categories.show', $category) }}" class="text-decoration-none" style="color: inherit;">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -283,10 +292,10 @@
                 <div class="col-lg-3 mb-4">
                     <h6 class="mb-3">تواصل معنا</h6>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" style="color: inherit;"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" style="color: inherit;"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" style="color: inherit;"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" style="color: inherit;"><i class="fab fa-linkedin fa-lg"></i></a>
                     </div>
                 </div>
             </div>
@@ -295,10 +304,10 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0 text-light">&copy; {{ date('Y') }} مكتبة الكتب. جميع الحقوق محفوظة.</p>
+                    <p class="mb-0">&copy; {{ date('Y') }} مكتبة الكتب. جميع الحقوق محفوظة.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-light">تم التطوير بـ <i class="fas fa-heart text-danger"></i> باستخدام Laravel</p>
+                    <p class="mb-0">تم التطوير بـ <i class="fas fa-heart text-danger"></i> باستخدام Laravel</p>
                 </div>
             </div>
         </div>
